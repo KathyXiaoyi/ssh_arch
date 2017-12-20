@@ -24,5 +24,4 @@ public class BaseServiceImpl<T, PK extends Serializable> implements IBaseService
 	public PK save(T entity) {
 		return baseDao.save(entity);
 	}
-
 }
