@@ -1,6 +1,5 @@
-Ä¿Ç°´úÂë°æ±¾£º1.0
-³õÊ¼°æ1.0£º²Î¿¼ÈçÏÂÁ´½ÓÊµÏÖµÄSpring + Spring MVC + Hibernate + Maven´úÂë¿ò¼Ü¡£
+ç›®å‰ä»£ç ç‰ˆæœ¬ï¼š1.0
+åˆå§‹ç‰ˆ1.0ï¼šå‚è€ƒå¦‚ä¸‹é“¾æ¥å®ç°çš„Spring 4.3 + Spring MVC + Hibernate 4.2 + Mavenä»£ç æ¡†æ¶ã€‚
 http://blog.csdn.net/js931178805/article/details/39642743
 http://blog.csdn.net/js931178805/article/details/39643981
 
-°æ±¾1.1£ºÌí¼ÓrestfulÖ§³Ö
