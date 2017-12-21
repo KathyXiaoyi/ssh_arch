@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
@@ -21,10 +22,6 @@ public class BaseEntity implements Serializable{
 	
 	// ID 
 	private String id;
-	// 创建日期
-	private Date createDate;
-	// 修改日期
-	private Date modifyDate;
 	
 	@Id
 	@Column(length = 32, nullable = true)
@@ -36,23 +33,6 @@ public class BaseEntity implements Serializable{
 
 	public void setId(String id) {
 		this.id = id;
-	}
-
-	@Column(updatable = false)
-	public Date getCreateDate() {
-		return createDate;
-	}
-
-	public void setCreateDate(Date createDate) {
-		this.createDate = createDate;
-	}
-
-	public Date getModifyDate() {
-		return modifyDate;
-	}
-
-	public void setModifyDate(Date modifyDate) {
-		this.modifyDate = modifyDate;
 	}
 
 	@Override
