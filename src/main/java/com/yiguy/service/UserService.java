@@ -1,4 +1,4 @@
-package com.yiguy.service.impl;
+package com.yiguy.service;
 
 import java.util.List;
 
@@ -7,11 +7,10 @@ import org.springframework.stereotype.Service;
 
 import com.yiguy.dao.IBaseDao;
 import com.yiguy.model.User;
-import com.yiguy.service.UserServiceI;
 
 
 @Service(value = "userService")
-public class UserServiceImpl implements UserServiceI{
+public class UserService {
 	
 	private IBaseDao<User> userDao;
 	
@@ -24,15 +23,13 @@ public class UserServiceImpl implements UserServiceI{
 		this.userDao = baseDao;
 	}
 	
-	@Override
-	public String save_user() {
+	public int save_user() {
 		User user = new User();
 		user.setName("hehe");
 		user.setAge(10);
-		return userDao.save(user).toString();
+		return (int) userDao.save(user);
 	}
 	
-	@Override
 	public int getAllUsersCount() {
 		String hql = "from User";
 		List<User> userList = userDao.find(hql);

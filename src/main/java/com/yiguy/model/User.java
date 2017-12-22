@@ -1,18 +1,32 @@
 package com.yiguy.model;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
 
 @Entity
-@Table(name="user")
-public class User extends BaseEntity{
+@Table(name = "user")
+public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
-	@Column(name="name")
+
+	private int id;
+
 	private String name;
-	@Column(name="age")
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	private int age;
 
+	@Column(name = "name")
 	public String getName() {
 		return name;
 	}
@@ -21,6 +35,7 @@ public class User extends BaseEntity{
 		this.name = name;
 	}
 
+	@Column(name = "age")
 	public int getAge() {
 		return age;
 	}
@@ -28,5 +43,4 @@ public class User extends BaseEntity{
 	public void setAge(int age) {
 		this.age = age;
 	}
-
 }
