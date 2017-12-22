@@ -30,10 +30,11 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
-  `id` varchar(255) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `age` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
-3. 将ssh_arch项目部署到tomcat, 通过URL：http://localhost:8080/ssh_arch/user/create_user 即可向数据库插入一条数据，以此检验项目是否运行成功。
+3. 将ssh_arch项目部署到tomcat, 通过访问URL：http://localhost:8080/ssh_arch/user/create_user 即可向数据库插入一条数据
+      通过访问URL:http://localhost:8080/ssh_arch/user/count 即可查询user表中有多少条数据 以此检验项目是否运行成功。
