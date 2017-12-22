@@ -106,7 +106,7 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
 		<!-- 将事务应用在com.yiguy.service.impl下所有目录的以service结尾的类的方法中 -->
 		<!-- expression="execution(* com.dao.*.*(..))" 其中第一个*代表返回值，第二*代表dao下子包，第三个*代表方法名，“（..）”代表方法参数 
 			service..*Impl 表示service包下或所有子包下的Impl结束的类 -->
-		<aop:pointcut id="transactionPointcut" expression="execution(* com.yiguy.service.impl.*Service.*(..))" />
+		<aop:pointcut id="transactionPointcut" expression="execution(* com.yiguy.service.impl.*Impl.*(..))" />
 		<aop:advisor pointcut-ref="transactionPointcut"
 			advice-ref="transactionAdvice" />
 	</aop:config>
